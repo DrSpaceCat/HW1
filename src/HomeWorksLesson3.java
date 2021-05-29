@@ -26,28 +26,28 @@ public class HomeWorksLesson3 {
     //Первое задание
     public static void arrayTask1(){
 
-        int[] a = {1,0,1,1,0,1,0,0,0,1,0};
+        int[] invertedArray = {1,0,1,1,0,1,0,0,0,1,0};
 
-        for(int i = 0; i < a.length; i++){
-            System.out.print(a[i] + " заменен на ");
-            if( a[i] == 1 ){
-                a[i] = 0;
+        for(int i = 0; i < invertedArray.length; i++){
+            System.out.print(invertedArray[i] + " заменен на ");
+            if( invertedArray[i] == 1 ){
+                invertedArray[i] = 0;
             }
-            else a[i] = 1;
+            else invertedArray[i] = 1;
 
-            System.out.println(a[i]);
+            System.out.println(invertedArray[i]);
         }
     }
 
     //Второе задание
     public static void arrayTask2(){
 
-        int[] a = new int[100];
+        int[] array_1to100 = new int[100];
 
-        for(int i = 0; i < a.length; i++){
-            a[i] = (i + 1);
+        for(int i = 0; i < array_1to100.length; i++){
+            array_1to100[i] = (i + 1);
 
-            System.out.println(a[i]);
+            System.out.println(array_1to100[i]);
         }
     }
 
@@ -70,16 +70,16 @@ public class HomeWorksLesson3 {
 
     //Четвертое задание
     public static void arrayTask4(){
-        int[][] a = new int[5][5];
+        int[][] diagonalArray = new int[5][5];
 
-        for(int i = 0; i < a.length; i++){
+        for(int i = 0; i < diagonalArray.length; i++){
 
-            for(int j = 0; j < a[i].length; j++){
-                if( (i == j) || (( i + j ) == (a.length - 1))){
-                    a[i][j] = 1;
+            for(int j = 0; j < diagonalArray[i].length; j++){
+                if( (i == j) || (( i + j ) == (diagonalArray.length - 1))){
+                    diagonalArray[i][j] = 1;
                 }
 
-                System.out.print(" " + a[i][j] + " ");
+                System.out.print(" " + diagonalArray[i][j] + " ");
 
             }System.out.println();
         }
@@ -87,29 +87,29 @@ public class HomeWorksLesson3 {
 
     //Пятое задание
     public static int[] arrayTask5(int len, int initialValue){
-        int[] a = new int[len];
+        int[] arrayInitialValue = new int[len];
 
-        for(int i = 0; i < a.length; i++){
-            a[i] = initialValue;
+        for(int i = 0; i < arrayInitialValue.length; i++){
+            arrayInitialValue[i] = initialValue;
         }
 
-        return a;
+        return arrayInitialValue;
     }
 
     //Шестое задание
     public static void arrayTask6(){
 
-        int[] a ={4,55,61,3,2,34,5,10,2123,231,32,44,0};
+        int[] arrayMinMax ={4,55,61,3,2,34,5,10,2123,231,32,44,0};
 
-        int max = a[0];
-        int min = a[0];
+        int max = arrayMinMax[0];
+        int min = arrayMinMax[0];
 
-        for(int i = 1; i < a.length; i++){
-            if(max < a[i]){
-                max = a[i];
+        for(int i = 1; i < arrayMinMax.length; i++){
+            if(max < arrayMinMax[i]){
+                max = arrayMinMax[i];
             }
-            if(min > a[i]){
-                min = a[i];
+            if(min > arrayMinMax[i]){
+                min = arrayMinMax[i];
             }
         }
 
@@ -118,14 +118,14 @@ public class HomeWorksLesson3 {
 
     //Седьмое задание
     public static boolean arrayTask7(int[]a){
-
-        int sumA = 0;
-
+        //Объявляем переменную, в которую будем записывать сумму всех чисел в массиве
+        int sumArrayChecking = 0;
+        //Находим сумму
         for (int i = 0; i < a.length; i++){
-            sumA += a[i];
+            sumArrayChecking += a[i];
         }
-
-        if(a.length == 0 || a.length <= 3|| sumA == 0 ){
+        //Проверяем массив. Подходит ли он, для работы с ним далее.
+        if(a.length == 0 || a.length <= 3|| sumArrayChecking == 0 ){
             System.out.println("Неправильный массив!!!");
             return false;
         }
