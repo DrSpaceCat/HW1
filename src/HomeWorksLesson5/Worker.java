@@ -16,6 +16,6 @@ public class Worker {
         this.age = age;
     }
     void information(){
-        System.out.println(this.fullName + " " + this.post + " " + this.email + " " + this.phone + " " + this.pay + " " + this.pay);
+        System.out.println(this.fullName + ", " + this.post + ", " + this.email + ", " + this.phone + ", " + this.pay + ", " + this.pay);
     }
 }

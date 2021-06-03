@@ -12,8 +12,9 @@ public class HomeWorksLesson5 {
 
         for(int i = 0; i < workArray.length; i++){
             if(workArray[i].age>40){
-                System.out.println(workArray[i].fullName + ", " + workArray[i].post + ", " + workArray[i].email + ", " +
-                        workArray[i].phone + ", " +workArray[i].pay + ", " +workArray[i].age);
+
+                workArray[i].information();
+
             }
         }
 
